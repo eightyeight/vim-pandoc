@@ -7,7 +7,7 @@ set ft=pandoc to view it as a (pandoc) markdown file.]
 vim-pandoc: just the syntax
 ===========================
 
-This fork of [vim-pandoc][https://github.com/vim-pandoc/vim-pandoc) provides
+This fork of [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc) provides
 just syntax highlighting for pandoc's markdown dialect.
 No fancy extra editing content, just the syntax.
 
