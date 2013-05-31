@@ -47,8 +47,8 @@ syn match pandocTitleBlock /\%^\(%.*\n\)\{1,3}$/ skipnl
 " Header:
 "
 syn match pandocAtxHeader /^\s*#\{1,6}.*\n/ contains=pandocEmphasis
-syn match pandocSetexHeader /^.\+\n[=]\+$/
-syn match pandocSetexHeader /^.\+\n[-]\+$/
+syn match   pandocSetexHeader /\v%(\S\s*\n)@<!\_^\s*\S.*\n%(([=`'"~^_*+#-])\1*|([:.])\2{2,})\s*$/
+syn match   pandocSetexHeader /\v%(\S\s*\n)@<!\_^(([=`:.'"~^_*+#-])\2*\s*)\n\s*\S.*\n\1$/
 
 """""""""""""""""""""""""""""""""""""""""""""
 " Blockquotes:
@@ -225,8 +225,6 @@ hi link pandocFootnoteDef		Comment
 hi link pandocFootnoteBlock	Comment
 
 hi link pandocPCite Label
-
-hi link pandocHRule		Underlined
 
 hi pandocEmphasis gui=italic cterm=italic
 hi pandocStrong gui=bold cterm=bold
